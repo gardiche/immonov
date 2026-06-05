@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #1B2A4A;
+    --navy-dark: #141F38;
+    --off-white: #F7F8FA;
+    --blue-mid: #2E4DA0;
+    --blue-light: #4A6FD4;
+    --border: #e8eaf0;
+    --muted-foreground: #7a8099;
+    --background: #ffffff;
+    --foreground: #111827;
+    --radius: 0.625rem;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn-cta {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-sm font-semibold
+           bg-white text-[#1B2A4A] shadow-lg transition-all duration-200
+           hover:-translate-y-0.5 hover:shadow-xl cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-sm font-semibold
+           bg-[#1B2A4A] text-white transition-all duration-200
+           hover:bg-[#141F38] hover:-translate-y-0.5 cursor-pointer;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-sm font-semibold
+           border border-white/30 text-white transition-all duration-200
+           hover:bg-white/10 cursor-pointer;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-sm font-semibold
+           border border-[#1B2A4A]/20 text-[#1B2A4A] transition-all duration-200
+           hover:bg-[#1B2A4A]/5 cursor-pointer;
+  }
+
+  .card-immo {
+    @apply bg-white rounded-2xl border shadow-sm transition-all duration-200
+           hover:-translate-y-1 hover:shadow-md;
+  }
+
+  .container-immo {
+    @apply max-w-[1200px] mx-auto px-6;
+  }
+
+  .section {
+    @apply py-20 md:py-24;
+  }
+
+  .section-tight {
+    @apply py-12 md:py-16;
+  }
+
+  .input {
+    @apply w-full rounded-xl border px-4 py-3 text-sm bg-white outline-none transition-colors
+           focus:border-[#4A6FD4] focus:ring-2 focus:ring-[#4A6FD4]/20;
+  }
+
+  .font-serif-italic {
+    font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
