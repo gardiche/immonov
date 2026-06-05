@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -7,7 +6,9 @@ export default function Footer() {
       <div className="container-immo py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <Image src="/images/logo.png" alt="IMMONOV" height={48} width={140} className="h-12 w-auto object-contain brightness-0 invert mb-4" />
+            <span className="text-2xl font-bold tracking-tight mb-4 block" style={{ fontFamily: 'var(--font-playfair), Playfair Display, Georgia, serif' }}>
+              IMMO<span className="text-[#4A6FD4]">NOV</span>
+            </span>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
               La première plateforme de vente immobilière entre particuliers. 250€ fixes, 0% de commission.
             </p>

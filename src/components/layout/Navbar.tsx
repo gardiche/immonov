@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { ChevronDown, Home, Search, Settings } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import type { User } from '@supabase/supabase-js'
@@ -56,8 +55,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 h-16 bg-white/95 backdrop-blur border-b border-[color:var(--border)]">
       <div className="container-immo h-full flex items-center justify-between">
-        <Link href="/" className="flex-shrink-0">
-          <Image src="/images/logo.png" alt="IMMONOV" height={56} width={160} className="h-14 w-auto object-contain" />
+        <Link href="/" className="flex-shrink-0 flex items-center gap-1.5">
+          <span className="text-xl font-bold text-[#1B2A4A] tracking-tight" style={{ fontFamily: 'var(--font-playfair), Playfair Display, Georgia, serif' }}>
+            IMMO<span className="text-[#4A6FD4]">NOV</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
